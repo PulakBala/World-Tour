@@ -1,0 +1,9 @@
+.bg{
+    background-image: url("../../Images/back.jpg");
+    background-size: cover;
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    background-size: cover;
+    background-position: center;
+}

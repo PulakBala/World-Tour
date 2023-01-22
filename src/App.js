@@ -1,24 +1,18 @@
 import './App.css';
 import { RouterProvider } from 'react-router-dom';
-import { routes } from './Routes/Routes/Routes';
-import backgroundImage from './Images/back.jpg'
+import { routes } from './Routes/Routes/route';
+
 
 
 
 function App() {
   return (
-    <div className='opacity-100' style={{
-     width:'100%',
-     height:'600px',
-     backgroundRepeat: 'no-repeat',
-     backgroundPosition: 'center',
-     backgroundSize: 'cover',
-     backgroundImage: `url(${backgroundImage})`}}>
-
+    <div className='App'>
 
       <RouterProvider router={routes}></RouterProvider>
-    
+
     </div>
+    
   );
 }
 
