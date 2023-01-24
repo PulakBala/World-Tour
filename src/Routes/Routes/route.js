@@ -7,6 +7,7 @@ import Destination from "../../Pages/Destination/Destination";
 import Home from "../../Pages/Home/Home";
 import Login from "../../Pages/Login/Login";
 import Registration from "../../Pages/Registration/Registration";
+import India from "../../Shared/India/India";
 
 export const routes = createBrowserRouter([
     {
@@ -40,6 +41,11 @@ export const routes = createBrowserRouter([
             {
                 path: '/signup',
                 element: <Registration></Registration>
+            },
+            {
+                path: '/india',
+                element: <India></India>,
+                loader:({params}) => fetch(`https://tour-argentina-server-pulakbala.vercel.app/india`)
             }
 
             
