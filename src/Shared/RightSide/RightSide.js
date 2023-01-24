@@ -39,7 +39,7 @@ const RightSide = () => {
                     alt="Third slide"
                 />
                 <Carousel.Caption>
-                   <button>Bangladesh</button>
+                   <button><Link to='/bangladesh'>Bangladesh</Link></button>
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>
