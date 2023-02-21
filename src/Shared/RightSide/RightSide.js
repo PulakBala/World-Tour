@@ -28,7 +28,7 @@ const RightSide = () => {
                     alt="Second slide"
                 />
                 <Carousel.Caption>
-                   <button>Swezarland</button>
+                   <button><Link to="/switerland">Swezarland</Link></button>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>

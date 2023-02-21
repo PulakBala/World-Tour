@@ -9,6 +9,7 @@ import Login from "../../Pages/Login/Login";
 import Registration from "../../Pages/Registration/Registration";
 import Bangladesh from "../../Shared/Bangladesh/Bangladesh";
 import India from "../../Shared/India/India";
+import Switerland from "../../Shared/Switerland/Switerland";
 
 export const routes = createBrowserRouter([
     {
@@ -52,7 +53,13 @@ export const routes = createBrowserRouter([
                 path: '/bangladesh',
                 element: <Bangladesh></Bangladesh>,
                 loader: () => fetch(`https://tour-argentina-server.vercel.app/bangladesh`)
+            },
+            {
+                path: '/switerland',
+                element: <Switerland></Switerland>,
+                loader: ()=>fetch(`https://tour-argentina-server.vercel.app/switzerland`)
             }
+
 
             
         ]
