@@ -1,12 +1,21 @@
 import React from 'react';
+import { useContext } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { MdAirplanemodeActive } from "react-icons/md";
 import { Link } from 'react-router-dom';
+import { Authcontext } from '../UserContext/UserContext';
 
 
 const Header = () => {
+    const  {user, logOut} = useContext(Authcontext);
+
+    const handleLogOut =()=>{
+        logOut()
+        .then(() =>{})
+        .catch(error=> console.error(error))
+    }
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark"  variant="dark"  className=' fs-4' style={{textDecoration:'none'}}>
             <Container className='text-light'>
@@ -33,9 +42,19 @@ const Header = () => {
 
                     </Nav>
                     <Nav>
-                        <Nav.Link><Link to='/login'>Login</Link></Nav.Link>
                         <Nav.Link  href="#memes">
-                            <Link to='/signup'>Sign Up</Link>
+                            {
+                                user?.uid?
+                                <>
+                                    <span>{user?.displayName}</span>
+                                    <button onClick={handleLogOut}>Log out</button>
+                                </>
+                                :
+                                <>
+                                    <Link to='/login'>Login</Link>
+                                    <Link to='/signup'>Sign Up</Link>
+                                </>
+                            }
                         </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>

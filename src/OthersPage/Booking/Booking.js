@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Booking = () => {
     return (
@@ -26,7 +27,7 @@ const Booking = () => {
                     </div>
 
                 </div>
-                <button className='mt-3 p-2 px-5 '>Start Booking</button>
+                <button className='mt-3 p-2 px-5 '><Link to='/signup'>Start Booking</Link></button>
             </form>
         </div>
     );
