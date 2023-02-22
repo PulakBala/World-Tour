@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../../layout/Main";
 import News from "../../News/News";
+import Booking from "../../OthersPage/Booking/Booking";
 import Blog from "../../Pages/Blog/Blog";
 import Contact from "../../Pages/Contact/Contact";
 import Destination from "../../Pages/Destination/Destination";
@@ -58,6 +59,11 @@ export const routes = createBrowserRouter([
                 path: '/switerland',
                 element: <Switerland></Switerland>,
                 loader: ()=>fetch(`https://tour-argentina-server.vercel.app/switzerland`)
+            },
+            {
+                path: '/booking',
+                element: <Booking></Booking>
+
             }
 
 
